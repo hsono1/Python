@@ -1,0 +1,31 @@
+table
+{
+	border-collapse: collapse;
+}
+form
+{
+	background-color: lightgrey;
+	width: 250px;
+	height: 200px;
+}
+form p, input
+{
+	display: inline-block;
+}
+
+form input:nth-child(4)
+{
+	height: 30px;
+}
+form p
+{
+	width: 100px;
+}
+button
+{
+	margin-left: 180px;
+	background-color: green;
+	width: 50px;
+	border-radius: 1px;
+	color: white;
+}

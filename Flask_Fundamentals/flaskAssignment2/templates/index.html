@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="form submission">
+	<title>Dojo Survey</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+
+</head>
+<body>
+
+	<div class="form_container">
+
+		<form id="form1" method="post" action="/result">
+			<p>Your Name:<p/><input type="text" name="name" value="">
+			<p>Dojo Location:</p><select name="location">
+								<option value="San Jose">San Jose</option>
+								<option value="Berkeley">Berkeley</option>
+								<option value="Chicago">Chicago</option>
+								<option value="Seattle">Seattle</option>
+								</select>
+			<p>Favorite Language:</p><select name="language">
+								<option value="Python">Python</option>
+								<option value="HTML">HTML</option>
+								<option value="Javascript">Javascript</option>
+								<option value="Java">Java</option>
+								</select>
+			<p>Comment (optional):</p><textarea name="textarea"></textarea>
+								<input type="submit" name="Submit">
+
+		</form>
+
+
+	</div>
+
+
+
+
+</body>
+</html>

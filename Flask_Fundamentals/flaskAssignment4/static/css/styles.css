@@ -1,0 +1,44 @@
+body
+{
+	text-align: center;
+	padding-top: 100px;
+
+}
+
+input 
+{
+	border: 1px solid black;
+}
+
+input[type="submit"]
+{
+	display: block;
+	margin-left: 670px;
+	margin-top: 10px;
+	
+	box-shadow: 2px 2px 2px black;
+	background-color: transparent;
+}
+
+.too_low, .too_high, .right
+{
+	width: 200px;
+	height: 200px;
+	margin-left: 600px;
+	background-color: red;
+	margin-bottom: 20px;
+	color: white;
+	text-align: center;
+	line-height: 200px;
+	display: block;
+}
+
+
+.right
+{
+	background-color: green;
+}
+
+
+
+

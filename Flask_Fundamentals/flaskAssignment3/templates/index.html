@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter</title>
+</head>
+<body>
+
+	<h1>Counter</h1>	
+	<p>{{session['count']}} times</p>
+	<form action="/plus2" >
+		<input type="submit" name="plus2" value="plus 2 and Refresh">
+	</form>
+	<form action="/reset">
+		<input type="submit" name="reset" value="Reset">
+	</form>
+
+
+
+</body>
+</html>

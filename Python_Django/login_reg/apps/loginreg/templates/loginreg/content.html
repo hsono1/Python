@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Content Page"/>
+  <title>Content Page</title>
+  {% load staticfiles%}
+  <link rel="stylesheet" type="text/css" href="{% static 'loginreg/css/styles.css'%}">
+</head>
+<body>
+  <div class='container'>
+    <form action="logout" method="post">
+      {% csrf_token %}
+      <button type="submit">Logout</button>
+    </form>
+
+    {%  for element in user%}
+      <h1>Welcome {{element.first_name}}</h1>
+    {%  endfor%}
+
+    <h3>Users in the database:</h3>
+    <table border="1">
+      <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </thead>
+      {% for person in users %}
+      <tr>
+        <td>{{person.first_name}}</td>
+        <td>{{person.last_name}}</td>
+        <td>{{person.email}}</td>
+        <td>
+          <form action='/remove' method='post'>
+            {% csrf_token %}
+            <input type="hidden" name="id" value="{{person.id}}">
+            <input type="submit" value="Delete">
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="The Wall Assignemnt">
+	<title>The Wall</title>
+	<link rel="stylesheet" type="text/css" href="../static/styles.css">
+</head>
+<body>
+
+	<div class="header">
+
+	<h1>CodingDojo Wall</h1>
+
+	</div>
+
+
+	<div class="wrapper">
+
+		<div class="form_container">
+			<form action="/login" method="post">
+
+
+				<label for="email">Email:</label>
+				<input type="text" name="email">
+				<label for="password">Password:</label>
+				<input type="password" name="pw">
+				<input type="submit" name="btn_submit">
+
+			</form>
+
+
+			{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			{% for message in messages %}
+				<p> {{message}} </p>
+			{% endfor %}
+			{% endif %}
+			{% endwith %}
+		
+		</div>
+
+
+
+	</div>
+
+
+
+</body>
+</html>

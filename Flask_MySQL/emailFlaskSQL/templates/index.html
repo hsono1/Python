@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Email Flask SQL Python</title>
+	<style type="text/css">
+
+	.wrapper
+	{
+		width: 500px;
+		height: auto;
+		background-color: lightgrey;
+	}
+		
+	.email_response
+	{
+		height: auto;
+		width: 500px;
+		background-color: lightgrey;
+		display: hidden;
+		
+			
+
+	}
+
+	input[type="submit"]
+	{
+		display: block;
+		margin-top: 20px;
+		margin-left: 120px;
+	}
+
+
+
+	</style>
+
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<h2>{{output}}</h2>
+		<div class="email_response">
+			{% for emails in users_emails: %}
+    			<p>ID: {{emails['id']}}</p>
+    			<p>{{ emails['email']}}</p>
+    			<hr>
+  			{% endfor %}			
+
+		</div>
+		<form id="email_form" action="/emails" method="post">
+			Email:<input type="text" name="user_email">
+			<input type="submit" name="submit">
+		</form>
+
+	</div>
+
+
+
+
+
+
+</body>
+</html>

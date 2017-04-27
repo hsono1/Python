@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Email Validation</title>
+</head>
+<body>
+	<h1>Email Validation</h1>
+	{% for email in emails %}
+		<p>{{email.email}} {{email.created_at}} <a href="/remove/{{email.id}}">remove</a></p>
+	{% endfor %}
+</body>
+</html>

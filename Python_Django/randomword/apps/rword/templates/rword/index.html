@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Word</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'rword/css/styles.css' %}">
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<h3>Random Word (attempt # {{request.session.count}})</h3>
+		<div class="word_made">
+		{{request.session.variable}}
+		</div>
+		<form action="/success" method="POST">
+			{%  csrf_token   %}
+			<button type="submit">Generate</button>
+
+		</form>
+
+
+
+
+	</div>
+
+
+</body>
+</html>

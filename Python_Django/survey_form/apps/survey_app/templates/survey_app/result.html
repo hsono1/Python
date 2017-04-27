@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Survey Result</title>
+	<meta type="description" content="survey form page">
+	 {% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{%static 'survey_app/css/styles.css'%}">
+	</head>
+<body>
+
+	<div class="result_container">
+			<h3>Submitted Information</h3>
+			<p>Name: </p> {{user}}
+			<p>Location:</p> {{location}}
+			<p>Language:</p> {{language}}
+			<p>Comment:</p> {{comment}}
+	</div>
+
+</body>
+</html>

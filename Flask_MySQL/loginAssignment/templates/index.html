@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+
+	<style type="text/css">
+		
+		.form_container
+		{
+			width: 300px;
+			height: auto;
+			background-color: lightgrey;
+			padding: 10px;
+
+		}
+
+
+		input
+		{
+			display: block;
+			margin-bottom: 10px;
+
+		}
+
+
+	</style>
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+	<div class="form_container">
+		<form action="/login" method="post">
+
+
+			<label for="email">Email:</label>
+			<input type="text" name="email">
+			<label for="password">Password:</label>
+			<input type="password" name="pw">
+			<input type="submit" name="btn_submit">
+
+		</form>
+
+
+		{% with messages = get_flashed_messages() %}
+		{% if messages %}
+		{% for message in messages %}
+			<p> {{message}} </p>
+		{% endfor %}
+		{% endif %}
+		{% endwith %}
+		
+	</div>
+
+
+</body>
+</html>

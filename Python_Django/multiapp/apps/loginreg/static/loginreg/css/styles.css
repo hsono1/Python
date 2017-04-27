@@ -1,0 +1,35 @@
+.container
+{
+	width: 970px;
+	height: auto;
+	background-color: lightgrey;
+	border: 5px solid black;
+	padding: 50px;
+	padding-top: 30px;
+
+}
+
+form input
+{
+	border: 1px solid black;
+}
+
+form button
+{
+	display: block;
+	margin-top: 10px;
+	background-color: grey;
+	color: white;
+	border-radius: 1px;
+	box-shadow: 1px 1px 2px black;
+	margin-left: 60px;
+	width: 60px;
+}
+
+table
+{
+	border: 1px solid black;
+	border-collapse: collapse;
+	text-align: center;
+
+}
